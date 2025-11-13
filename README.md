@@ -6,36 +6,44 @@ This project demonstrates **data science, machine learning, and deployment** ski
 ---
 
 ## Overview
+
 This project analyzes customer behavior and subscription data to predict churn probability.  
-The model is trained using **XGBoost** within a Scikit-Learn pipeline and deployed via a **Streamlit app** that shows:
-- ✅ **“Eligible / Low Risk”** 
-- ❌ **“At Risk”** 
+The model is trained using **Logistic Regression**, **Random Forest**, and **XGBoost**, compared inside a Jupyter notebook, and the best model (**XGBoost**) is exported and used by the Streamlit app.
+
+The UI shows:
+
+- ✅ **“Eligible / Low Risk”**
+- ❌ **“At Risk / High Churn”**  
 
 ---
 
 ## 📁 Repository Structure
+
 ```plaintext
 customer-churn-prediction/
 ├── app/
-│   └── streamlit_app.py           
+│   └── streamlit_app.py                
 │
 ├── data/
-│   ├── data_raw/                  
-│   ├── data_processed/            
-│   └── README.md
+│   ├── data_raw/                       
+│   │   ├── customer_churn_dataset-training-master.csv
+│   │   ├── customer_churn_dataset-testing-master.csv
+│   │   └── sample_customers.csv        
+│   ├── data_processed/                 
+│   └── README.md                       
 │
 ├── models/
-│   └── churn_xgb.joblib           
+│   └── churn_xgb.joblib                
 │
-├── reports/                       
+├── reports/                            
 │
 ├── src/
 │   └── churn/
 │       ├── __init__.py
-│       └── train.py               
+│       └── train.ipynb                 
 │
-├── .env                           
-├── .env.example                   
-├── requirements.txt               
-├── .gitignore                     
-└── README.md                      
+├── .env                                
+├── .env.example                        
+├── requirements.txt                    
+├── .gitignore                          
+└── README.md                           
