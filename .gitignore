@@ -1,24 +1,16 @@
-﻿# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.so
-*.egg-info/
+# Python venv
 .venv/
-.env
 
-# Data & artifacts
-/data/*
-/models/*
-/reports/*
+# Jupyter junk
+*.ipynb_checkpoints/
+.notebook_checkpoints/
 
-# Keep small docs
-!data/README.md
+# HuggingFace training outputs
+notebooks/distilbert_disaster/
 
-# Jupyter
-**/.ipynb_checkpoints/
+# Python cache
+__pycache__/
+*.pyc
+git add notebooks/03_transformer_model.ipynb notebooks/01_eda.ipynb .gitignore
 
-# OS
-.DS_Store
-Thumbs.db
+.venv/
